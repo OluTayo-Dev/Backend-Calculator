@@ -60,6 +60,6 @@ app.post("/add", (req, res) => {
   //    res.json({message: `The multiplication, division Substration and Sum of ${value1} and ${value2} is the ${answer}`})
     
   // })
-//   app.get("/get-All", (req, res) =>{
-//     res.send({result})
-//   });
+  app.get("/get-All", (req, res) =>{
+    res.send({result})
+  });
