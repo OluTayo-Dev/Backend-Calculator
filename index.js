@@ -1,23 +1,28 @@
-import express from "express";
+const express = require ("express");
+const path = require("path");
+const http =  require ("http");
 
 
 const app = express();
+const sever = http.createServer(app);
 
 
 
-app.get("/", (req, res) => {
-    res.send("Hello world!");
-});
+// app.get("/", (req, res) => {
+
+//     res.send("Hello world!");
+// });
 
 
-app.listen(4000, () => {
-    console.log("serving is running at 8000");
-});
+const PORT = 4000;
+sever.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 
 
 
+const result = []
 
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 
